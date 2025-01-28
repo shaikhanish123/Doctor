@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h3>A1Plus</h3>
+        </div>
+        <ul id="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Product.html">Product</a></li>
+            <li><a href="#one">Contact Us</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <div class="whatsapp-icon">
+            <a href="https://wa.me/919721911842" alt="hello">
+                <i class="fa-brands fa-square-whatsapp"></i>
+            </a>
+        </div>
+
+    </nav>
+
+    <!-- Hero section with flexbox -->
+    <div class="hero-section">
+        <h1> A1Plus Steel Furniture</h1>
+        <p>Strength Meets Style – Durable, elegant, and affordable furniture for your home and office.</p>
+    </div>
+
+    <div class="welcome-section">
+        <h2>Welcome to A1Plus Steel Furniture</h2>
+        <p class="intro-text">
+            Welcome to A1Plus Steel Furniture, where we specialize in creating high-quality iron
+            and steel furniture that enhances both the functionality and aesthetics of your spaces.
+            Whether you are looking for sleek office desks, sturdy cabinets, or stylish chairs,
+            we offer a diverse range of durable and elegant furniture for homes and offices.
+        </p>
+    </div>
+
+    <div class="products-section">
+        <div class="prod-section">
+            <h2>Our Products</h2>
+        </div>
+        <div class="product-img">
+            <img src="img/pr1.jpg" alt="Image" class="img1" alt="mumbai ">
+            <img src="img/pr5.jpg" alt="Image" class="img1">
+            <img src="img/pr6.jpg" alt="Image" class="img1">
+            <img src="img/pr7.jpg" alt="Image" class="img1">
+        </div>
+    </div>
+    <div class="footer-section" id="one">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Contact-Details</h3>
+                <h5>Email: <a href="mailto:anishahamadf@gmail.com">anishahamadf@gmail.com</a></h5>
+                <h5>Phone: +91 9721911842</h5>
+                <h5>Address: Khairani Road, ZIP</h5>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 A1Plus. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+
+        let menu = document.getElementById("menu-list");
+        let nav = document.querySelector("nav")
+        nav.addEventListener("click", function (e) {
+            e.stopPropagation();
+        })
+
+        window.onclick = () => {
+            menu.classList.remove("show")
+            console.log("working")
+        }
+        // Toggle menu visibility on click
+        function toggleMenu() {
+
+            // Check if the 'show' class is already present
+            if (menu.classList.contains("show")) {
+
+                menu.classList.remove("show");
+            } else {
+                menu.classList.add("show");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
