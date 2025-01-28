@@ -16,7 +16,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="About.html">About Us</a></li>
             <li><a href="Product.html">Product</a></li>
-            <li><a href="#three">Contact Us</a></li>
+            <li  class="conBtn"><a href="#three">Contact Us</a></li>
         </ul>
         <div class="search-bar">
             <input type="text" placeholder="Search..." id="search">
@@ -152,6 +152,11 @@
         menu.classList.add("show"); 
     }
 }
+         document.querySelector('.conBtn').addEventListener('click',anchar)
+   const menu =  document.querySelector('#menu-list')
+    function anchar(){
+        menu.style.display = 'none';
+    }
 
     </script>
 </body>
